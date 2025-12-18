@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgyid">
+    <TextView
+        android:id="@+id/thankyoutxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="Thank You!"
+        android:textColor="#136988"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/visit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="60dp"
+
+        android:gravity="center"
+        android:text="Visit Again.."
+        android:textColor="#136988"
+        android:textSize="20dp"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thankyoutxt"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="6dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+
+
+
+            <TextView
+                android:id="@+id/orderidtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Order ID :  "
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <View
+                android:id="@+id/v5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/orderidtxt"
+                android:layout_marginTop="0dp"
+                android:background="#20282C" />
+
+            <TextView
+                android:id="@+id/nametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/orderidtxt"
+                android:layout_margin="10dp"
+                android:text="Name :  "
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+            <View
+                android:id="@+id/v6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/nametxt"
+                android:layout_marginTop="0dp"
+                android:background="#20282C" />
+
+
+            <TextView
+                android:id="@+id/datetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nametxt"
+                android:layout_margin="10dp"
+                android:text="Date-Time :  "
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+
+            <View
+                android:id="@+id/v9"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/datetxt"
+                android:layout_marginTop="0dp"
+                android:background="#20282C" />
+
+            <!-- Product Details -->
+            <TextView
+                android:id="@+id/productdetailtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/paymentmethodtxt"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Product Details  "
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/paymentmethodtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/datetxt"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="Payment Method :   "
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <View
+                android:id="@+id/v11"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/paymentmethodtxt"
+                android:layout_marginTop="0dp"
+                android:background="#20282C" />
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nsv1"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_below="@id/productdetailtxt">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical"
+                    android:padding="6dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/productdetailrecycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+            <!-- Total Price -->
+            <TextView
+                android:id="@+id/totalpricetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Price :      "
+                android:layout_margin="10dp"
+                android:layout_below="@id/nsv1"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:textColor="@color/black"/>
+
+            <!-- Payment Method -->
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

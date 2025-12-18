@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "886128904444",
+    "firebase_url": "https://stationary-demo-default-rtdb.firebaseio.com",
+    "project_id": "stationary-demo",
+    "storage_bucket": "stationary-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886128904444:android:5e04cb03a8151f50d2af79",
+        "android_client_info": {
+          "package_name": "com.example.stationaryshop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwqSfivccKUrqussHYKG0vyMYVWWFoevY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

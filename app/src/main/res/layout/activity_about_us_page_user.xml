@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".about_us_page"
+    android:background="@drawable/about_back">
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="175dp"
+        android:background="@drawable/baseline_arrow_back_brown"
+        android:onClick="call_backsignup"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:id="@+id/rv1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SkyBlue Stationary"
+            android:textSize="25dp"
+            android:id="@+id/tv111"
+            android:textColor="@color/darkblue"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/call"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/tv111"
+            android:background="@drawable/custom_editext_1"
+            android:drawableLeft="@drawable/phone_icon"
+            android:gravity="center"
+            android:onClick="call_call"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:text="Call"
+            android:textAlignment="center"
+            android:textColor="@color/darkblue"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rv1"
+        android:layout_marginTop="2dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.cardview.widget.CardView
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/button_border"
+                android:backgroundTint="@color/white"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="6dp"
+                app:cardCornerRadius="30dp">
+                <RelativeLayout
+                    android:layout_width="390dp"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:id="@+id/rvicon">
+
+                        <ImageView
+                            android:id="@+id/instagram"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:onClick="instagram"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="10dp"
+                            android:src="@drawable/instagram" />
+                        <ImageView
+                            android:id="@+id/facebook"
+                            android:layout_width="55dp"
+                            android:layout_toRightOf="@id/instagram"
+                            android:layout_height="55dp"
+                            android:onClick="facebook"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="9dp"
+                            android:src="@drawable/facbook" />
+                        <ImageView
+                            android:id="@+id/printrst"
+                            android:layout_width="55dp"
+                            android:layout_toRightOf="@id/facebook"
+                            android:layout_height="55dp"
+                            android:layout_marginLeft="30dp"
+                            android:onClick="pinterest"
+                            android:layout_marginTop="9dp"
+                            android:src="@drawable/pinterest" />
+                        <ImageView
+                            android:id="@+id/website"
+                            android:layout_width="54dp"
+                            android:layout_toRightOf="@id/printrst"
+                            android:layout_height="54dp"
+                            android:onClick="website"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="9dp"
+                            android:src="@drawable/wbsit" />
+
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About Us"
+                        android:id="@+id/tv11"
+                        android:layout_below="@+id/rvicon"
+                        android:layout_marginRight="230dp"
+                        android:textColor="@color/darkblue"
+                        android:textSize="30dp"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv11"
+                        android:id="@+id/address"
+                        android:background="@color/white"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="20dp"
+                            android:onClick="location"
+                            android:src="@drawable/location"/>
+                        <TextView
+                            android:id="@+id/tvaddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="5dp"
+                            android:text="   G/50,Sns Platina,Vesu Main Road,opp.Shreik Residency,Surat,Gujarat 395007."
+                            android:textAlignment="center"
+                            android:textColor="@color/darkblue"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+                    <View
+                        android:id="@+id/v5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/address"
+                        android:layout_marginTop="10dp"
+                        android:background="#20282C" />
+                    <TextView
+                        android:id="@+id/tv12"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/v5"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/white"
+                        android:text="      Our Stationary shop app is a dynamic application designed to facilitate the operations of a Stationary business. Our app provides the many types of Stationary Products.  The goal of our App is to provide an efficient and time-saving solution for customer in the Stationary Shop."
+                        android:textColor="@color/darkblue"
+                        android:textSize="20dp"/>
+                    <View
+                        android:id="@+id/v1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tv12"
+                        android:layout_marginTop="10dp"
+                        android:background="#20282C" />
+                    <TextView
+                        android:id="@+id/tv13"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/tv12"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="230dp"
+                        android:text="Our Mission"
+                        android:textColor="@color/darkblue"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+                    <View
+                        android:id="@+id/v2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tv14"
+                        android:layout_marginTop="10dp"
+                        android:background="#20282C" />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv14"
+                        android:text="       Our Mission is to help as many Customers to Provide the best quality of products and to the low Cost."
+                        android:layout_below="@id/tv13"
+                        android:textColor="@color/darkblue"
+                        android:textSize="17dp"
+                        android:background="@color/white" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Our Story"
+                        android:id="@+id/tv15"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@id/tv14"
+                        android:layout_marginRight="230dp"
+                        android:textColor="@color/darkblue"
+                        android:textSize="25dp"
+                        android:textStyle="bold"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv16"
+                        android:text="We have started the our shop in 2018.and we have the greate Experiane of the shop to last 3 years.We have mosty connect to this area of living peaple."
+                        android:layout_below="@id/tv15"
+                        android:textColor="@color/darkblue"
+                        android:textSize="17dp"
+                        android:background="@color/white"/>
+                    <View
+                        android:id="@+id/v3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/tv16"
+                        android:layout_marginTop="10dp"
+                        android:background="#20282C" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rl1"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgyid"
+    tools:context=".thankyou">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="470dp"
+        android:id="@+id/rl2"
+        android:background="@drawable/top_background">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lt1"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="0dp"
+            android:foregroundGravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/done5"
+            tools:ignore="MissingClass" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lt1"
+            android:layout_marginLeft="100dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="14dp"
+            android:text="THANK  YOU!"
+            android:textColor="@color/black"
+            android:textSize="35dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Order hasbeen Placed Successfull."
+        android:layout_below="@+id/rl2"
+        android:textColor="@color/black"
+        android:id="@+id/tv1"
+        android:textSize="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="30dp"
+        android:text="Expected delivery within 45-60 minutes."
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+
+</RelativeLayout>

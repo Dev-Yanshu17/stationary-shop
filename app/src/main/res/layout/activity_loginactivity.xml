@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".Loginactivity"
+    android:background="@drawable/bgyid">
+    <TextView
+        android:id="@+id/tv8"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="175dp"
+        android:background="@drawable/baseline_arrow_back_brown"
+        android:onClick="call_backsignup"
+        tools:ignore="SpeakableTextPresentCheck" />
+    <TextView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="60dp"
+        android:fontFamily="@font/font2"
+        android:textColor="#136988"
+        android:text="Welcome"
+        android:textSize="45sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="80dp"
+        android:fontFamily="@font/font2"
+        android:textColor="#136988"
+        android:text="Please login to continue.."
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="390dp"
+        android:layout_height="400dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="320dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="1dp">
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="6dp">
+                <TextView
+                    android:id="@+id/tv20"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Email ID"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp" />
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_below="@+id/login"
+                    android:padding="12dp"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+                <TextView
+                    android:id="@+id/tv21"
+                    android:layout_width="380dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Password"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20dp" />
+
+                <EditText
+                    android:id="@+id/pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_below="@+id/email"
+                    android:padding="12dp"
+                    android:hint="Password"
+                    android:textStyle="bold"
+                    android:inputType="textPassword"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+
+                <TextView
+                    android:id="@+id/forgetpass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/pass"
+                    android:text="Forget password?"
+                    android:layout_marginTop="10dp"
+                    android:gravity="right"
+                    android:onClick="forgtpassword"
+                    android:textStyle="bold"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="240dp"/>
+
+                <Button
+                    android:id="@+id/signin"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/forgetpass"
+                    android:layout_marginLeft="99dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="120dp"
+                    android:fontFamily="@font/font2"
+                    android:padding="20dp"
+                    android:text="SIGN IN"
+                    android:backgroundTint="#B2E3FA"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:onClick="signin"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/signin"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/registertxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:text="Register"
+                        android:onClick="register"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/registertxt">
+
+                        <TextView
+                            android:id="@+id/t1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Don't have an account?  "
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+   android:background="@drawable/adminbackground"
+    android:layout_height="match_parent"
+    tools:context=".ViewAllProductActivity">
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/custom_appbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerView"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/recyclerViewcategory"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    <ImageView
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:id="@+id/add_product"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="12dp"
+        android:background="@drawable/bg_shape"
+        android:backgroundTint="@color/sky"
+        android:padding="8dp"
+        android:src="@drawable/add2"
+        android:onClick="iv1"/>
+</RelativeLayout>

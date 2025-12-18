@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgyid"
+    tools:context=".StationaryProductDetails">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/custom_appbar"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:id="@+id/ns"
+        android:layout_below="@+id/app_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="12dp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/stationary_product_image"
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <ImageView
+                        android:id="@+id/wishlistIcon"
+                        android:layout_width="55dp"
+                        android:layout_height="55dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="279dp"
+                        android:layout_marginLeft="300dp"
+                        android:layout_marginEnd="22dp"
+                        android:background="@drawable/bg_shap_bottom1"
+                        android:src="@drawable/wishlistunfill"
+                        android:layout_marginTop="5dp"
+                        android:padding="10dp" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/stationary_product_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:gravity="start"
+                android:text="Beauti Product Name"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/stationary_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="6dp"
+                android:gravity="start"
+                android:text="MRP : ₹ 120"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+
+
+            <TextView
+                android:id="@+id/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:gravity="start"
+                android:text="Product Details : "
+                android:textColor="@color/gray"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/stationary_product_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:gravity="start"
+                android:text="Also note that doing this will modify drawables of ALL progress bars in your app. To do this only to a particular one, call mutate on drawable, then set color filter on it and then call set*Drawable on your progressBar. "
+                android:textSize="14dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/reviewtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="Add Review"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/review_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/reviewtxt"
+                    android:layout_marginHorizontal="6dp"
+                    android:layout_toLeftOf="@+id/send"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="Enter Your Review"
+                    android:padding="15dp"
+                    android:textSize="13dp" />
+
+                <ImageView
+                    android:id="@+id/send"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_below="@+id/reviewtxt"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/bg_shape"
+                    android:backgroundTint="@color/sky"
+                    android:padding="10dp"
+                    android:src="@drawable/send"
+                    app:tint="#136988" />
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/review_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/ns">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="Add toCart"
+            android:textSize="20dp"
+            android:drawableStart="@drawable/cart"
+            android:gravity="center"
+            android:onClick="addtocart"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/bg_shape"
+            android:backgroundTint="@color/sky"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:id="@+id/addtocart"/>
+    </RelativeLayout>
+
+</RelativeLayout>

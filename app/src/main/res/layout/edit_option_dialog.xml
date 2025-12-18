@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/adminbackground"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/chose" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/carddelete"
+        android:layout_height="240dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="@color/sky"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="6dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="271dp">
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="90dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="Choose Option"
+                    android:textColor="@color/black"
+                    android:textSize="25dp" />
+
+
+
+
+                <TextView
+                    android:id="@+id/edit_product1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/text"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_shape"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:text="Edit Product"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginVertical="58dp"
+                    android:layout_marginLeft="290dp"
+                    android:src="@drawable/upate3"
+                    app:tint="@color/black" />
+
+
+                <TextView
+                    android:id="@+id/delete_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_below="@+id/edit_product1"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/bg_shape"
+                    android:backgroundTint="@color/white"
+                    android:gravity="center"
+                    android:text="Delete Product"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginVertical="140dp"
+                    android:layout_marginLeft="290dp"
+                    android:src="@drawable/delete"
+                    app:tint="@color/black" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
